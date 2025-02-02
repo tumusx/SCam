@@ -1,10 +1,15 @@
 import SwiftUI
 
-struct CameraPreview : View {
+struct CameraPreview: View {
+    
+    @State private var viewModel = CameraViewModel()
+    
     var body: some View {
-        VStack {
-            Button("Take a picture") {
-            }
-        }
+        CameraView(cameraViewModel: viewModel)
     }
+}
+
+
+#Preview{
+    CameraPreview()
 }
